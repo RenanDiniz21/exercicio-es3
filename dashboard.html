@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+        }
+
+        /* Barra superior */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            text-align: center;
+        }
+
+        /* Menu lateral */
+        nav {
+            width: 220px;
+            height: 100vh;
+            background-color: #34495e;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding-top: 60px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 15px 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Conteúdo principal */
+        main {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .welcome {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Painel do Usuário</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">🏠 Início</a></li>
+            <li><a href="#">📊 Relatórios</a></li>
+            <li><a href="#">⚙️ Configurações</a></li>
+            <li><a href="#">🚪 Sair</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="welcome">
+            <h2>Bem-vindo(a), <span id="username">Usuário</span>!</h2>
+            <p>Você está autenticado no sistema. Aproveite seu painel.</p>
+        </div>
+    </main>
+
+    <script>
+        // Simula o nome do usuário autenticado
+        // (em um sistema real, esse dado viria do backend ou do localStorage)
+        const nomeUsuario = localStorage.getItem("usuario") || "João";
+        document.getElementById("username").textContent = nomeUsuario;
+    </script>
+</body>
+</html>
+
